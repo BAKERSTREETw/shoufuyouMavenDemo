@@ -17,9 +17,9 @@ public class TradeServlet extends HttpServlet implements javax.servlet.Servlet {
             throws ServletException, IOException {
             YeepayClient client = YeepayClientFactory.createSfyClient();
             TradeRequestDTO tradereq = new TradeRequestDTO();
-            tradereq.setMerchantOrderId("5628667429");
+            tradereq.setMerchantOrderId("5702572266");
 //            tradereq.setTradeNumber("201808291606057807");
-            tradereq.setTradeNumber("201808301851080443");
+            tradereq.setTradeNumber("201808311603045979");
             tradereq.setPeriods(12);
             tradereq.setIp("127.0.0.1");
             Map<String,String> map = client.crateTrade(tradereq);
