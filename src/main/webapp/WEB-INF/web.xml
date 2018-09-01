@@ -140,6 +140,16 @@
     <url-pattern>/yeepay-create-trade</url-pattern>
   </servlet-mapping>
 
+  <!-- 退款 -->
+  <servlet>
+    <servlet-name>TradeRefundServlet</servlet-name>
+    <servlet-class>com.yeepay.sdk.demo.TradeRefundServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TradeRefundServlet</servlet-name>
+    <url-pattern>/yeepay-trade-refund</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <servlet-name>CreateOrderNotify</servlet-name>
     <servlet-class>com.yeepay.sdk.demo.CreateOrderNotifyServlet</servlet-class>

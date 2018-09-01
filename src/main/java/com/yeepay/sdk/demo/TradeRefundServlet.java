@@ -19,9 +19,11 @@ public class TradeRefundServlet extends HttpServlet implements javax.servlet.Ser
             throws ServletException, IOException {
         YeepayClient client = YeepayClientFactory.createSfyClient();
         TradeRefundDTO dto = new TradeRefundDTO();
-        dto.setMerchantOrderId("");
-        dto.setMerchantRefundId("");
-        dto.setRefundAmount(0);
+        dto.setMerchantOrderId("5717046980");
+        String refundId = Long.toString(System.currentTimeMillis()).substring(3);
+        System.out.println("refundId="+refundId);
+        dto.setMerchantRefundId(refundId);
+        dto.setRefundAmount(1000);
         dto.setRefundReason("用户不想出行");
         Map<String,String> map = client.buildTradeRefund(dto);
         System.out.println(map);
